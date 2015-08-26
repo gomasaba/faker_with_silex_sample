@@ -1,0 +1,11 @@
+user_detail:
+    path: /v1/users/{user_id}
+    defaults: { _controller: 'App\Controller\UsersController::detail' }
+    methods: GET
+    requirements:
+      user_id:  \d+
+user_search:
+    path: /v1/users/search
+    defaults: { _controller: 'App\Controller\UsersController::search' }
+    methods: GET
+
